@@ -19,7 +19,7 @@ class SnippetSerializer(serializers.Serializer):
         instance.title= validated_data.get('title', instance.title)
         instance.code= validated_data.get('code', instance.code)
         instance.language= validated_data.get('language', instance.language)
-        
+        instance.save()
         return instance
     
     
